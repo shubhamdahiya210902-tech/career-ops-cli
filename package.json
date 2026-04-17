@@ -1,0 +1,39 @@
+{
+  "name": "career-ops-cli",
+  "version": "0.1.0",
+  "description": "Automated job application factory — find roles, generate tailored CVs and cover letters, and track applications from the terminal. Powered by Google Gemini.",
+  "type": "module",
+  "bin": {
+    "career-ops": "./career-ops.js"
+  },
+  "main": "career-ops.js",
+  "scripts": {
+    "start": "node career-ops.js",
+    "init": "node career-ops.js init",
+    "daily": "node career-ops.js daily"
+  },
+  "keywords": [
+    "cli",
+    "job-search",
+    "cv",
+    "resume",
+    "ats",
+    "gemini",
+    "automation"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@google/genai": "^1.50.1",
+    "commander": "^14.0.3",
+    "conf": "^15.1.0",
+    "dotenv": "^17.4.2",
+    "inquirer": "^13.4.1",
+    "js-yaml": "^4.1.1",
+    "open": "^11.0.0",
+    "openai": "^6.34.0",
+    "playwright": "^1.59.1"
+  }
+}

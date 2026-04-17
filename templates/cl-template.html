@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cover Letter — {{COMPANY}}</title>
+<style>
+  @page { margin: 20mm; size: A4; }
+  body { 
+    font-family: 'Helvetica', 'Arial', sans-serif; 
+    font-size: 11pt; 
+    line-height: 1.5; 
+    color: #333; 
+    margin: 0; 
+    padding: 0;
+  }
+  .header { margin-bottom: 30px; border-bottom: 1px solid #000; padding-bottom: 15px; }
+  .header h1 { font-size: 20pt; margin: 0 0 5px 0; color: #000; }
+  .contact-info { font-size: 10pt; color: #555; }
+  
+  .date { margin-bottom: 20px; font-weight: bold; }
+  .recipient { margin-bottom: 25px; line-height: 1.2; }
+  
+  .content { text-align: justify; }
+  .content p { margin-bottom: 15px; }
+  
+  .signature { margin-top: 30px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>{{NAME}}</h1>
+    <div class="contact-info">
+      {{EMAIL}} | {{PHONE}}<br>
+      {{LOCATION}}<br>
+      {{LINKEDIN}}
+    </div>
+  </div>
+
+  <div class="date">{{DATE}}</div>
+
+  <div class="recipient">
+    <b>Hiring Team</b><br>
+    {{COMPANY}}<br>
+    {{COMPANY_LOCATION}}
+  </div>
+
+  <div class="content">
+    {{CONTENT}}
+  </div>
+
+  <div class="signature">
+    Sincerely,<br><br><br>
+    <b>{{NAME}}</b>
+  </div>
+</body>
+</html>

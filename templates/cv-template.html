@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{NAME}} — CV</title>
+<style>
+  @page { margin: 15mm; size: A4; }
+  body { 
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }
+  .container { width: 100%; max-width: 800px; margin: 0 auto; }
+  
+  .header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+  .header h1 { font-size: 26pt; margin: 0 0 5px 0; color: #000; text-transform: uppercase; letter-spacing: 1px; }
+  .contact-info { font-size: 9.5pt; color: #444; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+
+  .section-title {
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    color: #000;
+    border-bottom: 1px solid #444;
+    padding-bottom: 1px;
+    break-after: avoid;
+  }
+
+  .summary { margin-bottom: 10px; text-align: justify; }
+
+  .entry { margin-bottom: 10px; }
+  .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0px; }
+  .entry-title { font-weight: bold; font-size: 11pt; color: #000; }
+  .entry-date { font-size: 10pt; color: #444; font-weight: bold; }
+  .entry-subtitle { font-style: italic; font-size: 10pt; color: #333; margin-bottom: 2px; }
+  .entry-details { font-size: 9.5pt; color: #555; margin-bottom: 3px; }
+
+  ul { margin: 2px 0 0 0; padding-left: 15pt; list-style-type: disc; }
+  li { margin-bottom: 2px; text-align: justify; }
+
+  .skills-container { margin-bottom: 10px; }
+  .skill-cat { margin-bottom: 4px; display: flex; }
+  .skill-cat-title { font-weight: bold; width: 130px; min-width: 130px; color: #000; }
+  .skill-list { flex-grow: 1; color: #333; }
+
+  .certs-grid { display: flex; flex-wrap: wrap; gap: 10px 20px; font-size: 10pt; }
+  .cert-item { display: flex; align-items: center; }
+  .cert-item::before { content: "•"; margin-right: 8px; color: #666; }
+
+  .avoid-break { break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>{{NAME}}</h1>
+    <div class="contact-info">
+      <span>{{EMAIL}}</span> | 
+      <span>{{PHONE}}</span> | 
+      <span>{{LOCATION}}</span> | 
+      <span>{{LINKEDIN}}</span>
+    </div>
+  </div>
+
+  <div class="section-title">Professional Summary</div>
+  <div class="summary">{{SUMMARY}}</div>
+
+  <div class="section-title">Core Competencies</div>
+  <div class="skills-container">
+    {{SKILLS_BLOCK}}
+  </div>
+
+  <div class="section-title">Work Experience</div>
+  {{EXPERIENCE_BLOCK}}
+
+  <div class="section-title">Projects</div>
+  {{PROJECTS_BLOCK}}
+
+  <div class="section-title">Education</div>
+  {{EDUCATION_BLOCK}}
+
+  <div class="section-title">Certifications & Awards</div>
+  <div class="certs-grid">
+    {{CERTIFICATIONS_BLOCK}}
+  </div>
+
+</div>
+</body>
+</html>
