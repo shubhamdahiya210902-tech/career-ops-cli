@@ -1,7 +1,7 @@
 {
   "name": "career-ops-cli",
-  "version": "0.1.0",
-  "description": "Automated job application factory — find roles, generate tailored CVs and cover letters, and track applications from the terminal. Powered by Google Gemini.",
+  "version": "1.1.0",
+  "description": "Automated job application factory — find roles, generate tailored CVs and cover letters, ATS-optimize them, check posting liveness, and track applications from the terminal. Powered by Google Gemini.",
   "type": "module",
   "bin": {
     "career-ops": "./career-ops.js"
@@ -10,7 +10,10 @@
   "scripts": {
     "start": "node career-ops.js",
     "init": "node career-ops.js init",
-    "daily": "node career-ops.js daily"
+    "daily": "node career-ops.js daily",
+    "score": "node career-ops.js score",
+    "liveness": "node career-ops.js liveness",
+    "tracker": "node career-ops.js tracker"
   },
   "keywords": [
     "cli",
@@ -18,9 +21,16 @@
     "cv",
     "resume",
     "ats",
+    "ats-optimization",
+    "cover-letter",
     "gemini",
-    "automation"
+    "automation",
+    "liveness"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shubhamdahiya210902-tech/career-ops-cli.git"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=18"
